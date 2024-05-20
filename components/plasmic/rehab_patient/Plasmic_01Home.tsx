@@ -307,51 +307,7 @@ function Plasmic_01Home__RenderFunc(props: {
               }
             }}
           >
-            <div
-              className={classNames(projectcss.all, sty.freeBox___3VjMt)}
-              onClick={async event => {
-                const $steps = {};
-
-                $steps["goToPage"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        destination: (() => {
-                          try {
-                            return $ctx.config.routePrefix + "/Schedule";
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return undefined;
-                            }
-                            throw e;
-                          }
-                        })()
-                      };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          __nextRouter?.push(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToPage"] != null &&
-                  typeof $steps["goToPage"] === "object" &&
-                  typeof $steps["goToPage"].then === "function"
-                ) {
-                  $steps["goToPage"] = await $steps["goToPage"];
-                }
-              }}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox___3VjMt)}>
               <div className={classNames(projectcss.all, sty.freeBox__nawkb)}>
                 <PlasmicImg__
                   alt={""}
@@ -465,9 +421,23 @@ function Plasmic_01Home__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo3NursingKnowledge"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/NursingKnowledge` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/NursingKnowledge";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -483,13 +453,11 @@ function Plasmic_01Home__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo3NursingKnowledge"] != null &&
-                typeof $steps["goTo3NursingKnowledge"] === "object" &&
-                typeof $steps["goTo3NursingKnowledge"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo3NursingKnowledge"] = await $steps[
-                  "goTo3NursingKnowledge"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -529,9 +497,25 @@ function Plasmic_01Home__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo4NutritionKnowledge"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Nutritionknowledge` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix + "/Nutritionknowledge"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -547,47 +531,15 @@ function Plasmic_01Home__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo4NutritionKnowledge"] != null &&
-                typeof $steps["goTo4NutritionKnowledge"] === "object" &&
-                typeof $steps["goTo4NutritionKnowledge"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo4NutritionKnowledge"] = await $steps[
-                  "goTo4NutritionKnowledge"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
-            <div
-              className={classNames(projectcss.all, sty.freeBox__uOqJ2)}
-              onClick={async event => {
-                const $steps = {};
-
-                $steps["goTo营养知识"] = true
-                  ? (() => {
-                      const actionArgs = { destination: `/Nutritionknowledge` };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          __nextRouter?.push(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goTo营养知识"] != null &&
-                  typeof $steps["goTo营养知识"] === "object" &&
-                  typeof $steps["goTo营养知识"].then === "function"
-                ) {
-                  $steps["goTo营养知识"] = await $steps["goTo营养知识"];
-                }
-              }}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__uOqJ2)}>
               <div className={classNames(projectcss.all, sty.freeBox__qtjzw)}>
                 <PlasmicImg__
                   alt={""}
@@ -618,38 +570,52 @@ function Plasmic_01Home__RenderFunc(props: {
               </div>
             </div>
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__e2MGb)}>
-            <div
-              className={classNames(projectcss.all, sty.freeBox__z1Nln)}
-              onClick={async event => {
-                const $steps = {};
+          <div
+            className={classNames(projectcss.all, sty.freeBox__e2MGb)}
+            onClick={async event => {
+              const $steps = {};
 
-                $steps["goTo5CommonQa"] = true
-                  ? (() => {
-                      const actionArgs = { destination: `/Common` };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          __nextRouter?.push(destination);
+              $steps["goToPage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Common";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
                         }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goTo5CommonQa"] != null &&
-                  typeof $steps["goTo5CommonQa"] === "object" &&
-                  typeof $steps["goTo5CommonQa"].then === "function"
-                ) {
-                  $steps["goTo5CommonQa"] = await $steps["goTo5CommonQa"];
-                }
-              }}
-            >
+                      })()
+                    };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
+              ) {
+                $steps["goToPage"] = await $steps["goToPage"];
+              }
+            }}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__z1Nln)}>
               <div className={classNames(projectcss.all, sty.freeBox__jOSr)}>
                 <PlasmicImg__
                   alt={""}
@@ -681,7 +647,51 @@ function Plasmic_01Home__RenderFunc(props: {
             </div>
           </div>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox__hFrDr)}>
+        <div
+          className={classNames(projectcss.all, sty.freeBox__hFrDr)}
+          onClick={async event => {
+            const $steps = {};
+
+            $steps["goToPage"] = true
+              ? (() => {
+                  const actionArgs = {
+                    destination: (() => {
+                      try {
+                        return $ctx.config.routePrefix + "/LoginPage";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()
+                  };
+                  return (({ destination }) => {
+                    if (
+                      typeof destination === "string" &&
+                      destination.startsWith("#")
+                    ) {
+                      document
+                        .getElementById(destination.substr(1))
+                        .scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      __nextRouter?.push(destination);
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["goToPage"] != null &&
+              typeof $steps["goToPage"] === "object" &&
+              typeof $steps["goToPage"].then === "function"
+            ) {
+              $steps["goToPage"] = await $steps["goToPage"];
+            }
+          }}
+        >
           <div
             className={classNames(
               projectcss.all,

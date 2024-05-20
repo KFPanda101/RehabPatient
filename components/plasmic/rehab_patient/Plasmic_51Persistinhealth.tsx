@@ -158,7 +158,7 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
             >
               {"\u6587\u7ae0"}
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox___6TDo)}>
+            <div className={classNames(projectcss.all, sty.freeBox__nJpg5)}>
               <PlasmicImg__
                 data-plasmic-name={"img"}
                 data-plasmic-override={overrides.img}
@@ -174,9 +174,23 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
                 onClick={async event => {
                   const $steps = {};
 
-                  $steps["goTo00LoginPage"] = true
+                  $steps["goToPage"] = true
                     ? (() => {
-                        const actionArgs = { destination: `/LoginPage` };
+                        const actionArgs = {
+                          destination: (() => {
+                            try {
+                              return $ctx.config.routePrefix + "/LoginPage";
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()
+                        };
                         return (({ destination }) => {
                           if (
                             typeof destination === "string" &&
@@ -192,11 +206,11 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
                       })()
                     : undefined;
                   if (
-                    $steps["goTo00LoginPage"] != null &&
-                    typeof $steps["goTo00LoginPage"] === "object" &&
-                    typeof $steps["goTo00LoginPage"].then === "function"
+                    $steps["goToPage"] != null &&
+                    typeof $steps["goToPage"] === "object" &&
+                    typeof $steps["goToPage"].then === "function"
                   ) {
-                    $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                    $steps["goToPage"] = await $steps["goToPage"];
                   }
                 }}
                 src={{
@@ -211,7 +225,7 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text___9HDc6
+                  sty.text___0QmXv
                 )}
               >
                 {"\u9000\u51fa"}
@@ -257,9 +271,23 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
           onClick={async event => {
             const $steps = {};
 
-            $steps["goTo5CommonQa"] = true
+            $steps["goToPage"] = true
               ? (() => {
-                  const actionArgs = { destination: `/Common` };
+                  const actionArgs = {
+                    destination: (() => {
+                      try {
+                        return $ctx.config.routePrefix + "/Common";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()
+                  };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&
@@ -275,11 +303,11 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
                 })()
               : undefined;
             if (
-              $steps["goTo5CommonQa"] != null &&
-              typeof $steps["goTo5CommonQa"] === "object" &&
-              typeof $steps["goTo5CommonQa"].then === "function"
+              $steps["goToPage"] != null &&
+              typeof $steps["goToPage"] === "object" &&
+              typeof $steps["goToPage"].then === "function"
             ) {
-              $steps["goTo5CommonQa"] = await $steps["goTo5CommonQa"];
+              $steps["goToPage"] = await $steps["goToPage"];
             }
           }}
         >

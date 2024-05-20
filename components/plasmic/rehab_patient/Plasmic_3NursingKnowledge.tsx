@@ -153,10 +153,10 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
           >
             {"\u5217\u8868"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__mGWq)}>
+          <div className={classNames(projectcss.all, sty.freeBox__sQbl)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img__lussr)}
+              className={classNames(sty.img__otEgo)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -167,9 +167,23 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
               onClick={async event => {
                 const $steps = {};
 
-                $steps["goTo00LoginPage"] = true
+                $steps["goToPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/LoginPage` };
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return $ctx.config.routePrefix + "/LoginPage";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -185,11 +199,11 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
                     })()
                   : undefined;
                 if (
-                  $steps["goTo00LoginPage"] != null &&
-                  typeof $steps["goTo00LoginPage"] === "object" &&
-                  typeof $steps["goTo00LoginPage"].then === "function"
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
                 ) {
-                  $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                  $steps["goToPage"] = await $steps["goToPage"];
                 }
               }}
               src={{
@@ -204,7 +218,7 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__iHwoB
+                sty.text__bfyfm
               )}
             >
               {"\u9000\u51fa"}
@@ -236,10 +250,24 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo31PreventPressureUlcers"] = true
+              $steps["goToPage"] = true
                 ? (() => {
                     const actionArgs = {
-                      destination: `/PreventPressureulcers`
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix + "/PreventPressureulcers"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
                     };
                     return (({ destination }) => {
                       if (
@@ -256,13 +284,11 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo31PreventPressureUlcers"] != null &&
-                typeof $steps["goTo31PreventPressureUlcers"] === "object" &&
-                typeof $steps["goTo31PreventPressureUlcers"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo31PreventPressureUlcers"] = await $steps[
-                  "goTo31PreventPressureUlcers"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -283,9 +309,25 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo32PreventingThrombosis"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/PreventingThrombosis` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix + "/PreventingThrombosis"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -301,13 +343,11 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo32PreventingThrombosis"] != null &&
-                typeof $steps["goTo32PreventingThrombosis"] === "object" &&
-                typeof $steps["goTo32PreventingThrombosis"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo32PreventingThrombosis"] = await $steps[
-                  "goTo32PreventingThrombosis"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -328,10 +368,25 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo33PreventingFallsAndFallingFromTheBed"] = true
+              $steps["goToPage"] = true
                 ? (() => {
                     const actionArgs = {
-                      destination: `/Preventingfallsandfallingfromthebed`
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix +
+                            "/Preventingfallsandfallingfromthebed"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
                     };
                     return (({ destination }) => {
                       if (
@@ -348,14 +403,11 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo33PreventingFallsAndFallingFromTheBed"] != null &&
-                typeof $steps["goTo33PreventingFallsAndFallingFromTheBed"] ===
-                  "object" &&
-                typeof $steps["goTo33PreventingFallsAndFallingFromTheBed"]
-                  .then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo33PreventingFallsAndFallingFromTheBed"] =
-                  await $steps["goTo33PreventingFallsAndFallingFromTheBed"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -376,10 +428,25 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo34TreatmentOfEsophagealForeignBodies"] = true
+              $steps["goToPage"] = true
                 ? (() => {
                     const actionArgs = {
-                      destination: `/Treatmentofesophagealforeignbodies`
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix +
+                            "/Treatmentofesophagealforeignbodies"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
                     };
                     return (({ destination }) => {
                       if (
@@ -396,14 +463,11 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo34TreatmentOfEsophagealForeignBodies"] != null &&
-                typeof $steps["goTo34TreatmentOfEsophagealForeignBodies"] ===
-                  "object" &&
-                typeof $steps["goTo34TreatmentOfEsophagealForeignBodies"]
-                  .then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo34TreatmentOfEsophagealForeignBodies"] =
-                  await $steps["goTo34TreatmentOfEsophagealForeignBodies"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -419,7 +483,54 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
               </div>
             </div>
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__wfXQo)}>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__wfXQo)}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["goToPage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix +
+                            "/PICCtubeplacementprocessing"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
+              ) {
+                $steps["goToPage"] = await $steps["goToPage"];
+              }
+            }}
+          >
             <div
               className={classNames(projectcss.all, sty.freeBox__battk)}
               onClick={async event => {
@@ -474,9 +585,23 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
           onClick={async event => {
             const $steps = {};
 
-            $steps["goToHome"] = true
+            $steps["goToPage"] = true
               ? (() => {
-                  const actionArgs = { destination: `/Home` };
+                  const actionArgs = {
+                    destination: (() => {
+                      try {
+                        return $ctx.config.routePrefix + "/Home";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()
+                  };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&
@@ -492,11 +617,11 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
                 })()
               : undefined;
             if (
-              $steps["goToHome"] != null &&
-              typeof $steps["goToHome"] === "object" &&
-              typeof $steps["goToHome"].then === "function"
+              $steps["goToPage"] != null &&
+              typeof $steps["goToPage"] === "object" &&
+              typeof $steps["goToPage"].then === "function"
             ) {
-              $steps["goToHome"] = await $steps["goToHome"];
+              $steps["goToPage"] = await $steps["goToPage"];
             }
           }}
         >

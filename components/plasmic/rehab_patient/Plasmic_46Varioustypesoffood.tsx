@@ -157,7 +157,7 @@ function Plasmic_46Varioustypesoffood__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__nbaKm)}>
+          <div className={classNames(projectcss.all, sty.freeBox__def1A)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -173,9 +173,23 @@ function Plasmic_46Varioustypesoffood__RenderFunc(props: {
               onClick={async event => {
                 const $steps = {};
 
-                $steps["goTo00LoginPage"] = true
+                $steps["goToPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/LoginPage` };
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return $ctx.config.routePrefix + "/LoginPage";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -191,11 +205,11 @@ function Plasmic_46Varioustypesoffood__RenderFunc(props: {
                     })()
                   : undefined;
                 if (
-                  $steps["goTo00LoginPage"] != null &&
-                  typeof $steps["goTo00LoginPage"] === "object" &&
-                  typeof $steps["goTo00LoginPage"].then === "function"
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
                 ) {
-                  $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                  $steps["goToPage"] = await $steps["goToPage"];
                 }
               }}
               src={{
@@ -210,7 +224,7 @@ function Plasmic_46Varioustypesoffood__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__i0FIu
+                sty.text__s1O3H
               )}
             >
               {"\u9000\u51fa"}
@@ -254,9 +268,25 @@ function Plasmic_46Varioustypesoffood__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo4NutritionKnowledge"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Nutritionknowledge` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix + "/Nutritionknowledge"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -272,13 +302,11 @@ function Plasmic_46Varioustypesoffood__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo4NutritionKnowledge"] != null &&
-                typeof $steps["goTo4NutritionKnowledge"] === "object" &&
-                typeof $steps["goTo4NutritionKnowledge"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo4NutritionKnowledge"] = await $steps[
-                  "goTo4NutritionKnowledge"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >

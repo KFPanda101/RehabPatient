@@ -188,7 +188,7 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__yjTfh)}>
+          <div className={classNames(projectcss.all, sty.freeBox__lJaU)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -204,9 +204,23 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
               onClick={async event => {
                 const $steps = {};
 
-                $steps["goTo00LoginPage"] = true
+                $steps["goToPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/LoginPage` };
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return $ctx.config.routePrefix + "/LoginPage";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -222,11 +236,11 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
                     })()
                   : undefined;
                 if (
-                  $steps["goTo00LoginPage"] != null &&
-                  typeof $steps["goTo00LoginPage"] === "object" &&
-                  typeof $steps["goTo00LoginPage"].then === "function"
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
                 ) {
-                  $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                  $steps["goToPage"] = await $steps["goToPage"];
                 }
               }}
               src={{
@@ -241,7 +255,7 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__umxTn
+                sty.text__j2ZmC
               )}
             >
               {"\u9000\u51fa"}
@@ -280,7 +294,53 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
               "        \u5b9e\u73b0\u5408\u7406\u8425\u517b\uff0c\u5173\u952e\u5728\u4e8e\u901a\u8fc7\u79d1\u5b66\u7684\u81b3\u98df\u89c4\u5212\uff0c\u786e\u4fdd\u63d0\u4f9b\u6ee1\u8db3\u4eba\u4f53\u751f\u7406\u9700\u6c42\u7684\u80fd\u91cf\u548c\u5404\u7c7b\u8425\u517b\u7d20\u3002\u8fd9\u4e0d\u4ec5\u9700\u8981\u5173\u6ce8\u8425\u517b\u7d20\u7684\u79cd\u7c7b\u548c\u6570\u91cf\uff0c\u8fd8\u5e94\u8003\u8651\u98df\u7269\u7684\u642d\u914d\uff0c\u4ee5\u4fc3\u8fdb\u8425\u517b\u7269\u8d28\u7684\u6709\u6548\u6d88\u5316\u3001\u5438\u6536\u548c\u5229\u7528\u3002"
             }
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox___8TKs7)}>
+          <div
+            className={classNames(projectcss.all, sty.freeBox___8TKs7)}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["goToPage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix + "/Nutritionknowledge"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
+              ) {
+                $steps["goToPage"] = await $steps["goToPage"];
+              }
+            }}
+          >
             <div
               className={classNames(
                 projectcss.all,

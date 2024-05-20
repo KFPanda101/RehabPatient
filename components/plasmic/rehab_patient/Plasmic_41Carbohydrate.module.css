@@ -52,7 +52,7 @@
   min-width: 0;
   padding: 15px 60px 15px 15px;
 }
-.freeBox__erByt {
+.freeBox__wdZs {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -70,7 +70,7 @@
 .img > picture > img {
   object-fit: contain;
 }
-.text__g7OaT {
+.text__nBfrY {
   width: auto;
   height: auto;
   max-width: 100%;

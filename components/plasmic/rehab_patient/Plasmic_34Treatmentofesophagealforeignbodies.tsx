@@ -159,7 +159,7 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__mR0D)}>
+          <div className={classNames(projectcss.all, sty.freeBox__xgY1G)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -175,9 +175,23 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
               onClick={async event => {
                 const $steps = {};
 
-                $steps["goTo00LoginPage"] = true
+                $steps["goToPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/LoginPage` };
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return $ctx.config.routePrefix + "/LoginPage";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -193,11 +207,11 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
                     })()
                   : undefined;
                 if (
-                  $steps["goTo00LoginPage"] != null &&
-                  typeof $steps["goTo00LoginPage"] === "object" &&
-                  typeof $steps["goTo00LoginPage"].then === "function"
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
                 ) {
-                  $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                  $steps["goToPage"] = await $steps["goToPage"];
                 }
               }}
               src={{
@@ -212,7 +226,7 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text___4FRE
+                sty.text__qeB9F
               )}
             >
               {"\u9000\u51fa"}
@@ -257,9 +271,23 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo3NursingKnowledge"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/NursingKnowledge` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/NursingKnowledge";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -275,13 +303,11 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo3NursingKnowledge"] != null &&
-                typeof $steps["goTo3NursingKnowledge"] === "object" &&
-                typeof $steps["goTo3NursingKnowledge"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo3NursingKnowledge"] = await $steps[
-                  "goTo3NursingKnowledge"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >

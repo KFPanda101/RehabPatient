@@ -153,10 +153,10 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
           >
             {"\u5217\u8868"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__waFSd)}>
+          <div className={classNames(projectcss.all, sty.freeBox__oHWaS)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img__zkSqX)}
+              className={classNames(sty.img___8Om55)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -167,9 +167,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
               onClick={async event => {
                 const $steps = {};
 
-                $steps["goTo00LoginPage"] = true
+                $steps["goToPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/LoginPage` };
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return $ctx.config.routePrefix + "/LoginPage";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -185,11 +199,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                     })()
                   : undefined;
                 if (
-                  $steps["goTo00LoginPage"] != null &&
-                  typeof $steps["goTo00LoginPage"] === "object" &&
-                  typeof $steps["goTo00LoginPage"].then === "function"
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
                 ) {
-                  $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                  $steps["goToPage"] = await $steps["goToPage"];
                 }
               }}
               src={{
@@ -204,7 +218,7 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__owB9V
+                sty.text__kiSuq
               )}
             >
               {"\u9000\u51fa"}
@@ -236,9 +250,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo41Carbohydrate"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Carbohydrate` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Carbohydrate";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -254,13 +282,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo41Carbohydrate"] != null &&
-                typeof $steps["goTo41Carbohydrate"] === "object" &&
-                typeof $steps["goTo41Carbohydrate"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo41Carbohydrate"] = await $steps[
-                  "goTo41Carbohydrate"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -281,9 +307,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo42Vitamin"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Vitamin` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Vitamin";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -299,11 +339,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo42Vitamin"] != null &&
-                typeof $steps["goTo42Vitamin"] === "object" &&
-                typeof $steps["goTo42Vitamin"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo42Vitamin"] = await $steps["goTo42Vitamin"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -324,9 +364,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo43Protein"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Protein` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Protein";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -342,11 +396,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo43Protein"] != null &&
-                typeof $steps["goTo43Protein"] === "object" &&
-                typeof $steps["goTo43Protein"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo43Protein"] = await $steps["goTo43Protein"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -367,9 +421,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo44Fat"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Fat` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Fat";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -385,11 +453,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo44Fat"] != null &&
-                typeof $steps["goTo44Fat"] === "object" &&
-                typeof $steps["goTo44Fat"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo44Fat"] = await $steps["goTo44Fat"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -410,9 +478,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo45Minerals"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Minerals` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Minerals";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -428,11 +510,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo45Minerals"] != null &&
-                typeof $steps["goTo45Minerals"] === "object" &&
-                typeof $steps["goTo45Minerals"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo45Minerals"] = await $steps["goTo45Minerals"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -453,9 +535,25 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo46VariousTypesOfFood"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Varioustypesoffood` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix + "/Varioustypesoffoode"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -471,13 +569,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo46VariousTypesOfFood"] != null &&
-                typeof $steps["goTo46VariousTypesOfFood"] === "object" &&
-                typeof $steps["goTo46VariousTypesOfFood"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo46VariousTypesOfFood"] = await $steps[
-                  "goTo46VariousTypesOfFood"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -498,9 +594,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo47ChooseFood"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Choosefood` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Choosefood";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -516,11 +626,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo47ChooseFood"] != null &&
-                typeof $steps["goTo47ChooseFood"] === "object" &&
-                typeof $steps["goTo47ChooseFood"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo47ChooseFood"] = await $steps["goTo47ChooseFood"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -541,10 +651,25 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo48BalancedDietaryGuidelines"] = true
+              $steps["goToPage"] = true
                 ? (() => {
                     const actionArgs = {
-                      destination: `/BalancedDietaryGuidelines`
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix +
+                            "/BalancedDietaryGuidelines"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
                     };
                     return (({ destination }) => {
                       if (
@@ -561,14 +686,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo48BalancedDietaryGuidelines"] != null &&
-                typeof $steps["goTo48BalancedDietaryGuidelines"] === "object" &&
-                typeof $steps["goTo48BalancedDietaryGuidelines"].then ===
-                  "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo48BalancedDietaryGuidelines"] = await $steps[
-                  "goTo48BalancedDietaryGuidelines"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -590,9 +712,23 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
           onClick={async event => {
             const $steps = {};
 
-            $steps["goToHome"] = true
+            $steps["goToPage"] = true
               ? (() => {
-                  const actionArgs = { destination: `/Home` };
+                  const actionArgs = {
+                    destination: (() => {
+                      try {
+                        return $ctx.config.routePrefix + "/Home";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()
+                  };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&
@@ -608,11 +744,11 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                 })()
               : undefined;
             if (
-              $steps["goToHome"] != null &&
-              typeof $steps["goToHome"] === "object" &&
-              typeof $steps["goToHome"].then === "function"
+              $steps["goToPage"] != null &&
+              typeof $steps["goToPage"] === "object" &&
+              typeof $steps["goToPage"].then === "function"
             ) {
-              $steps["goToHome"] = await $steps["goToHome"];
+              $steps["goToPage"] = await $steps["goToPage"];
             }
           }}
         >

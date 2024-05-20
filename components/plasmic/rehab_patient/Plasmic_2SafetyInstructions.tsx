@@ -153,10 +153,10 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
           >
             {"\u5b89\u5168\u987b\u77e5"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__xcAnx)}>
+          <div className={classNames(projectcss.all, sty.freeBox__xbYg7)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img__ggap)}
+              className={classNames(sty.img__lv9Tg)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -172,7 +172,7 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return undefined;
+                            return $ctx.config.routePrefix + "/LoginPage";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -218,7 +218,7 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__nhuuk
+                sty.text___1Cc
               )}
             >
               {"\u9000\u51fa"}
@@ -430,9 +430,23 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
           onClick={async event => {
             const $steps = {};
 
-            $steps["goTo21Train"] = true
+            $steps["goToPage"] = true
               ? (() => {
-                  const actionArgs = { destination: `/Train` };
+                  const actionArgs = {
+                    destination: (() => {
+                      try {
+                        return $ctx.config.routePrefix + "/Train";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()
+                  };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&
@@ -448,11 +462,11 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
                 })()
               : undefined;
             if (
-              $steps["goTo21Train"] != null &&
-              typeof $steps["goTo21Train"] === "object" &&
-              typeof $steps["goTo21Train"].then === "function"
+              $steps["goToPage"] != null &&
+              typeof $steps["goToPage"] === "object" &&
+              typeof $steps["goToPage"].then === "function"
             ) {
-              $steps["goTo21Train"] = await $steps["goTo21Train"];
+              $steps["goToPage"] = await $steps["goToPage"];
             }
           }}
         >
