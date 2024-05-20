@@ -229,9 +229,23 @@ function Plasmic_01Home__RenderFunc(props: {
               onClick={async event => {
                 const $steps = {};
 
-                $steps["goTo1TodaysSchedule"] = true
+                $steps["goToPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/Schedule` };
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return $ctx.config.routePrefix + "/Schedule";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -247,13 +261,11 @@ function Plasmic_01Home__RenderFunc(props: {
                     })()
                   : undefined;
                 if (
-                  $steps["goTo1TodaysSchedule"] != null &&
-                  typeof $steps["goTo1TodaysSchedule"] === "object" &&
-                  typeof $steps["goTo1TodaysSchedule"].then === "function"
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
                 ) {
-                  $steps["goTo1TodaysSchedule"] = await $steps[
-                    "goTo1TodaysSchedule"
-                  ];
+                  $steps["goToPage"] = await $steps["goToPage"];
                 }
               }}
             >
@@ -283,7 +295,7 @@ function Plasmic_01Home__RenderFunc(props: {
                   sty.text__fdHg5
                 )}
               >
-                {"\u4eca\u65e5\u65e5\u7a0b"}
+                {"\u4eca\u65e5\u65e5\u7a0b1"}
               </div>
             </div>
           </div>

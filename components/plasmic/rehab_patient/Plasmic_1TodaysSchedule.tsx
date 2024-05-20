@@ -64,7 +64,6 @@ import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
 import { RichTable } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-table";
 import { tableHelpers as RichTable_Helpers } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-table";
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -382,19 +381,7 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
                   e instanceof TypeError ||
                   e?.plasmicType === "PlasmicUndefinedDataError"
                 ) {
-                  return (() => {
-                    try {
-                      return $queries.query;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
-                      }
-                      throw e;
-                    }
-                  })();
+                  return undefined;
                 }
                 throw e;
               }

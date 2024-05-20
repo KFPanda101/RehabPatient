@@ -15,9 +15,11 @@ export interface GlobalContextsProviderProps {
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
+
   globalContextProps?: Partial<
     Omit<React.ComponentProps<typeof GlobalContext>, "children">
   >;
+
   envConfigProps?: Partial<
     Omit<React.ComponentProps<typeof EnvConfig>, "children">
   >;
