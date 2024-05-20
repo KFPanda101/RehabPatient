@@ -61,18 +61,12 @@ import {
 import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
 import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 
-import Dialog from "../../Dialog"; // plasmic-import: Talf5qXraSjO/component
-import Button from "../../Button"; // plasmic-import: vnLxTYkbvH4z/component
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: caYJwnGE8e7sjdEDGdZ8Mn/projectcss
 import sty from "./Plasmic_01Home.module.css"; // plasmic-import: B3wuV0yFpuAb/css
-
-import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: v7N5IrxbrqIP/icon
-import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: JVwqhgE0B7cn/icon
 
 createPlasmicElementProxy;
 
@@ -87,7 +81,6 @@ export const Plasmic_01Home__ArgProps = new Array<ArgPropType>();
 
 export type Plasmic_01Home__OverridesType = {
   root?: Flex__<"div">;
-  dialog?: Flex__<typeof Dialog>;
 };
 
 export interface Default_01HomeProps {}
@@ -122,24 +115,6 @@ function Plasmic_01Home__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = useCurrentUser?.() || {};
-
-  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
-    () => [
-      {
-        path: "dialog.open",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
-      }
-    ],
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
 
   return (
     <React.Fragment>
@@ -195,15 +170,6 @@ function Plasmic_01Home__RenderFunc(props: {
           >
             {"\u5f20\u7fe0\u5c71"}
           </div>
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__iIcP
-            )}
-          >
-            {"\u9996\u9875"}
-          </div>
         </div>
         <div className={classNames(projectcss.all, sty.freeBox__hntkM)}>
           <PlasmicImg__
@@ -232,7 +198,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
               $steps["goTo1TodaysSchedule"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Today's schedule` };
+                    const actionArgs = { destination: `/Schedule` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -265,7 +231,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
                 $steps["goTo1TodaysSchedule"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/Today's schedule` };
+                      const actionArgs = { destination: `/Schedule` };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -649,28 +615,19 @@ function Plasmic_01Home__RenderFunc(props: {
             {"\u8fd4\u56de"}
           </div>
         </div>
-        <Dialog
-          data-plasmic-name={"dialog"}
-          data-plasmic-override={overrides.dialog}
-          className={classNames("__wab_instance", sty.dialog)}
-          onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
-          open={generateStateValueProp($state, ["dialog", "open"])}
-        />
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "dialog"],
-  dialog: ["dialog"]
+  root: ["root"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  dialog: typeof Dialog;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -775,7 +732,6 @@ export const Plasmic_01Home = Object.assign(
   withUsePlasmicAuth(withPlasmicPageGuard(makeNodeComponent("root"))),
   {
     // Helper components rendering sub-elements
-    dialog: makeNodeComponent("dialog"),
 
     // Metadata about props expected for Plasmic_01Home
     internalVariantProps: Plasmic_01Home__VariantProps,

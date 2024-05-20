@@ -124,6 +124,8 @@ function Plasmic_00LoginPage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $globalActions = useGlobalActions?.();
+
   const currentUser = useCurrentUser?.() || {};
 
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
@@ -329,7 +331,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__ijz4E
+                      sty.formField__vePfX
                     )}
                     hidden={false}
                     hideValidationMessage={false}
@@ -343,13 +345,13 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     trigger={``}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__z4LVf)}
+                      className={classNames("__wab_instance", sty.input__zarPx)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__fuVx1
+                      sty.formField__dcFvd
                     )}
                     initialValue={"\u9a8c\u8bc1\u7801"}
                     label={"\u9a8c\u8bc1\u7801"}
@@ -357,11 +359,14 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     noStyle={true}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__cLfIp)}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.input___7XVqw
+                      )}
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__rfU0J)}
+                    className={classNames("__wab_instance", sty.button__umQ5W)}
                     disabled={false}
                     submitsForm={true}
                     type={"primary"}
@@ -370,7 +375,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__loOxt
+                        sty.text__awPTs
                       )}
                     >
                       {"\u767b\u5f55"}
@@ -552,32 +557,47 @@ function Plasmic_00LoginPage__RenderFunc(props: {
             onClick={async () => {
               const $steps = {};
 
-              $steps["updateInputValue"] = true
+              $steps["invokeGlobalAction"] = true
                 ? (() => {
-                    const actionArgs = {
-                      variable: {
-                        objRoot: $state,
-                        variablePath: ["input", "value"]
-                      },
-                      operation: 0
-                    };
-                    return (({ variable, value, startIndex, deleteCount }) => {
-                      if (!variable) {
-                        return;
-                      }
-                      const { objRoot, variablePath } = variable;
+                    const actionArgs = { args: ["user00046", "11111111", 1] };
+                    return $globalActions["GlobalContext.login"]?.apply(null, [
+                      ...actionArgs.args
+                    ]);
+                  })()
+                : undefined;
+              if (
+                $steps["invokeGlobalAction"] != null &&
+                typeof $steps["invokeGlobalAction"] === "object" &&
+                typeof $steps["invokeGlobalAction"].then === "function"
+              ) {
+                $steps["invokeGlobalAction"] = await $steps[
+                  "invokeGlobalAction"
+                ];
+              }
 
-                      $stateSet(objRoot, variablePath, value);
-                      return value;
+              $steps["goTo01Home"] = true
+                ? (() => {
+                    const actionArgs = { destination: `/Home` };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
                     })?.apply(null, [actionArgs]);
                   })()
                 : undefined;
               if (
-                $steps["updateInputValue"] != null &&
-                typeof $steps["updateInputValue"] === "object" &&
-                typeof $steps["updateInputValue"].then === "function"
+                $steps["goTo01Home"] != null &&
+                typeof $steps["goTo01Home"] === "object" &&
+                typeof $steps["goTo01Home"].then === "function"
               ) {
-                $steps["updateInputValue"] = await $steps["updateInputValue"];
+                $steps["goTo01Home"] = await $steps["goTo01Home"];
               }
             }}
             size={"large"}
