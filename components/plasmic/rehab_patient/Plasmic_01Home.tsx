@@ -170,6 +170,63 @@ function Plasmic_01Home__RenderFunc(props: {
           >
             {"\u5f20\u7fe0\u5c71"}
           </div>
+          <div className={classNames(projectcss.all, sty.freeBox__pQ9P8)}>
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__b6Wt2)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"25%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"auto"}
+              loading={"lazy"}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["goTo00LoginPage"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/LoginPage` };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goTo00LoginPage"] != null &&
+                  typeof $steps["goTo00LoginPage"] === "object" &&
+                  typeof $steps["goTo00LoginPage"].then === "function"
+                ) {
+                  $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                }
+              }}
+              src={{
+                src: "/plasmic/rehab_patient/images/资源162Xpng.png",
+                fullWidth: 198,
+                fullHeight: 198,
+                aspectRatio: undefined
+              }}
+            />
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__a40Tz
+              )}
+            >
+              {"\u9000\u51fa"}
+            </div>
+          </div>
         </div>
         <div className={classNames(projectcss.all, sty.freeBox__hntkM)}>
           <PlasmicImg__
@@ -198,7 +255,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
               $steps["goTo1TodaysSchedule"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Schedule` };
+                    const actionArgs = { destination: `/TodaysSchedule` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -295,7 +352,7 @@ function Plasmic_01Home__RenderFunc(props: {
                   sty.text__fdHg5
                 )}
               >
-                {"\u4eca\u65e5\u65e5\u7a0b1"}
+                {"\u4eca\u65e5\u65e5\u7a0b"}
               </div>
             </div>
           </div>
@@ -306,7 +363,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
               $steps["goTo2SafetyInstructions"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Safety Instructions` };
+                    const actionArgs = { destination: `/SafetyInstructions` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -370,7 +427,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
               $steps["goTo3NursingKnowledge"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Nursing Knowledge` };
+                    const actionArgs = { destination: `/NursingKnowledge` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -434,9 +491,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
               $steps["goTo4NutritionKnowledge"] = true
                 ? (() => {
-                    const actionArgs = {
-                      destination: `/4-Nutrition knowledge`
-                    };
+                    const actionArgs = { destination: `/Nutritionknowledge` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -469,9 +524,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
                 $steps["goTo营养知识"] = true
                   ? (() => {
-                      const actionArgs = {
-                        destination: `/4-Nutrition knowledge`
-                      };
+                      const actionArgs = { destination: `/Nutritionknowledge` };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -533,7 +586,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
                 $steps["goTo5CommonQa"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/new-page-18` };
+                      const actionArgs = { destination: `/Common` };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -600,7 +653,7 @@ function Plasmic_01Home__RenderFunc(props: {
 
               $steps["goTo00LoginPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/` };
+                    const actionArgs = { destination: `/LoginPage` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&

@@ -331,7 +331,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__tPbla
+                      sty.formField__ssdcb
                     )}
                     hidden={false}
                     hideValidationMessage={false}
@@ -345,16 +345,13 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     trigger={``}
                   >
                     <AntdInput
-                      className={classNames(
-                        "__wab_instance",
-                        sty.input___7MSls
-                      )}
+                      className={classNames("__wab_instance", sty.input__jpUg0)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___4QyJn
+                      sty.formField___12L8
                     )}
                     initialValue={"\u9a8c\u8bc1\u7801"}
                     label={"\u9a8c\u8bc1\u7801"}
@@ -362,11 +359,11 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     noStyle={true}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__y9Ooz)}
+                      className={classNames("__wab_instance", sty.input__jzLvd)}
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__bb7Zz)}
+                    className={classNames("__wab_instance", sty.button__s7Yt6)}
                     disabled={false}
                     submitsForm={true}
                     type={"primary"}
@@ -375,7 +372,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___0Ny9P
+                        sty.text__fUHmE
                       )}
                     >
                       {"\u767b\u5f55"}
@@ -575,9 +572,9 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                 ];
               }
 
-              $steps["goTo01Home"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Home` };
+                    const actionArgs = {};
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -593,11 +590,11 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo01Home"] != null &&
-                typeof $steps["goTo01Home"] === "object" &&
-                typeof $steps["goTo01Home"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo01Home"] = await $steps["goTo01Home"];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
             size={"large"}

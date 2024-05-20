@@ -152,7 +152,7 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
 
           $steps["goTo4NutritionKnowledge"] = true
             ? (() => {
-                const actionArgs = { destination: `/4-Nutrition knowledge` };
+                const actionArgs = { destination: `/Nutritionknowledge` };
                 return (({ destination }) => {
                   if (
                     typeof destination === "string" &&
@@ -206,7 +206,7 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
 
                 $steps["goTo00LoginPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/` };
+                      const actionArgs = { destination: `/LoginPage` };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&

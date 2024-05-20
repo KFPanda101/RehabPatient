@@ -168,7 +168,7 @@ function Plasmic_21Train__RenderFunc(props: {
 
                 $steps["goTo00LoginPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/` };
+                      const actionArgs = { destination: `/LoginPage` };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&

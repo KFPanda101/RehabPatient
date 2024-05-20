@@ -176,7 +176,7 @@ function Plasmic_32PreventingThrombosis__RenderFunc(props: {
 
                 $steps["goTo00LoginPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/` };
+                      const actionArgs = { destination: `/LoginPage` };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -257,7 +257,7 @@ function Plasmic_32PreventingThrombosis__RenderFunc(props: {
 
               $steps["goTo3NursingKnowledge"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/Nursing Knowledge` };
+                    const actionArgs = { destination: `/NursingKnowledge` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&

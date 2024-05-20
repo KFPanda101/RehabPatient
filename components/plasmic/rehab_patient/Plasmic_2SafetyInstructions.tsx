@@ -169,7 +169,7 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
 
                 $steps["goTo00LoginPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/` };
+                      const actionArgs = { destination: `/LoginPage` };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -418,9 +418,7 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
 
             $steps["goTo21Train"] = true
               ? (() => {
-                  const actionArgs = {
-                    destination: `/4-Nutrition knowledge-2`
-                  };
+                  const actionArgs = { destination: `/Train` };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&
