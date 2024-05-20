@@ -184,9 +184,23 @@ function Plasmic_01Home__RenderFunc(props: {
               onClick={async event => {
                 const $steps = {};
 
-                $steps["goTo00LoginPage"] = true
+                $steps["goToPage"] = true
                   ? (() => {
-                      const actionArgs = { destination: `/LoginPage` };
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return $ctx.config.routePrefix + "/LoginPage";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
                       return (({ destination }) => {
                         if (
                           typeof destination === "string" &&
@@ -202,11 +216,11 @@ function Plasmic_01Home__RenderFunc(props: {
                     })()
                   : undefined;
                 if (
-                  $steps["goTo00LoginPage"] != null &&
-                  typeof $steps["goTo00LoginPage"] === "object" &&
-                  typeof $steps["goTo00LoginPage"].then === "function"
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
                 ) {
-                  $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
+                  $steps["goToPage"] = await $steps["goToPage"];
                 }
               }}
               src={{
@@ -253,9 +267,23 @@ function Plasmic_01Home__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo1TodaysSchedule"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/TodaysSchedule` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/TodaysSchedule";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -271,13 +299,11 @@ function Plasmic_01Home__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo1TodaysSchedule"] != null &&
-                typeof $steps["goTo1TodaysSchedule"] === "object" &&
-                typeof $steps["goTo1TodaysSchedule"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo1TodaysSchedule"] = await $steps[
-                  "goTo1TodaysSchedule"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
@@ -361,9 +387,25 @@ function Plasmic_01Home__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goTo2SafetyInstructions"] = true
+              $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/SafetyInstructions` };
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return (
+                            $ctx.config.routePrefix + "/SafetyInstructions"
+                          );
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -379,13 +421,11 @@ function Plasmic_01Home__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goTo2SafetyInstructions"] != null &&
-                typeof $steps["goTo2SafetyInstructions"] === "object" &&
-                typeof $steps["goTo2SafetyInstructions"].then === "function"
+                $steps["goToPage"] != null &&
+                typeof $steps["goToPage"] === "object" &&
+                typeof $steps["goToPage"].then === "function"
               ) {
-                $steps["goTo2SafetyInstructions"] = await $steps[
-                  "goTo2SafetyInstructions"
-                ];
+                $steps["goToPage"] = await $steps["goToPage"];
               }
             }}
           >
