@@ -58,8 +58,6 @@ import {
   useDataEnv,
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
-import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
-import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -596,51 +594,9 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   return func;
 }
 
-function withPlasmicPageGuard<P extends object>(
-  WrappedComponent: React.ComponentType<P>
-) {
-  const PageGuard: React.FC<P> = props => (
-    <PlasmicPageGuard__
-      minRole={null}
-      appId={"caYJwnGE8e7sjdEDGdZ8Mn"}
-      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
-      canTriggerLogin={true}
-    >
-      <WrappedComponent {...props} />
-    </PlasmicPageGuard__>
-  );
-
-  return PageGuard;
-}
-
-function withUsePlasmicAuth<P extends object>(
-  WrappedComponent: React.ComponentType<P>
-) {
-  const WithUsePlasmicAuthComponent: React.FC<P> = props => {
-    const dataSourceCtx = usePlasmicDataSourceContext() ?? {};
-    const { isUserLoading, user, token } = plasmicAuth.usePlasmicAuth({
-      appId: "caYJwnGE8e7sjdEDGdZ8Mn"
-    });
-
-    return (
-      <PlasmicDataSourceContextProvider__
-        value={{
-          ...dataSourceCtx,
-          isUserLoading,
-          userAuthToken: token,
-          user
-        }}
-      >
-        <WrappedComponent {...props} />
-      </PlasmicDataSourceContextProvider__>
-    );
-  };
-  return WithUsePlasmicAuthComponent;
-}
-
 export const Plasmic_2SafetyInstructions = Object.assign(
   // Top-level Plasmic_2SafetyInstructions renders the root element
-  withUsePlasmicAuth(withPlasmicPageGuard(makeNodeComponent("root"))),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
 

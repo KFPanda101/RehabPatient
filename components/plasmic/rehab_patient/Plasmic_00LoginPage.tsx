@@ -58,8 +58,6 @@ import {
   useDataEnv,
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
-import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
-import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
 import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
@@ -331,7 +329,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__k2Opl
+                      sty.formField___6YXd1
                     )}
                     hidden={false}
                     hideValidationMessage={false}
@@ -345,13 +343,13 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     trigger={``}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__etrtA)}
+                      className={classNames("__wab_instance", sty.input__oqCKa)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___1M8WG
+                      sty.formField__v02Kl
                     )}
                     initialValue={"\u9a8c\u8bc1\u7801"}
                     label={"\u9a8c\u8bc1\u7801"}
@@ -359,14 +357,11 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     noStyle={true}
                   >
                     <AntdInput
-                      className={classNames(
-                        "__wab_instance",
-                        sty.input___6Gm79
-                      )}
+                      className={classNames("__wab_instance", sty.input__w98Bd)}
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__rOsM)}
+                    className={classNames("__wab_instance", sty.button__x8Ku)}
                     disabled={false}
                     submitsForm={true}
                     type={"primary"}
@@ -375,7 +370,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__yqUkU
+                        sty.text__cquhq
                       )}
                     >
                       {"\u767b\u5f55"}
@@ -673,51 +668,9 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   return func;
 }
 
-function withPlasmicPageGuard<P extends object>(
-  WrappedComponent: React.ComponentType<P>
-) {
-  const PageGuard: React.FC<P> = props => (
-    <PlasmicPageGuard__
-      minRole={null}
-      appId={"caYJwnGE8e7sjdEDGdZ8Mn"}
-      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
-      canTriggerLogin={true}
-    >
-      <WrappedComponent {...props} />
-    </PlasmicPageGuard__>
-  );
-
-  return PageGuard;
-}
-
-function withUsePlasmicAuth<P extends object>(
-  WrappedComponent: React.ComponentType<P>
-) {
-  const WithUsePlasmicAuthComponent: React.FC<P> = props => {
-    const dataSourceCtx = usePlasmicDataSourceContext() ?? {};
-    const { isUserLoading, user, token } = plasmicAuth.usePlasmicAuth({
-      appId: "caYJwnGE8e7sjdEDGdZ8Mn"
-    });
-
-    return (
-      <PlasmicDataSourceContextProvider__
-        value={{
-          ...dataSourceCtx,
-          isUserLoading,
-          userAuthToken: token,
-          user
-        }}
-      >
-        <WrappedComponent {...props} />
-      </PlasmicDataSourceContextProvider__>
-    );
-  };
-  return WithUsePlasmicAuthComponent;
-}
-
 export const Plasmic_00LoginPage = Object.assign(
   // Top-level Plasmic_00LoginPage renders the root element
-  withUsePlasmicAuth(withPlasmicPageGuard(makeNodeComponent("root"))),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
     form: makeNodeComponent("form"),
