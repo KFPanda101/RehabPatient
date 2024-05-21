@@ -698,31 +698,6 @@ function Plasmic_01Home__RenderFunc(props: {
             )}
             onClick={async event => {
               const $steps = {};
-
-              $steps["goTo00LoginPage"] = true
-                ? (() => {
-                    const actionArgs = { destination: `/LoginPage` };
-                    return (({ destination }) => {
-                      if (
-                        typeof destination === "string" &&
-                        destination.startsWith("#")
-                      ) {
-                        document
-                          .getElementById(destination.substr(1))
-                          .scrollIntoView({ behavior: "smooth" });
-                      } else {
-                        __nextRouter?.push(destination);
-                      }
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["goTo00LoginPage"] != null &&
-                typeof $steps["goTo00LoginPage"] === "object" &&
-                typeof $steps["goTo00LoginPage"].then === "function"
-              ) {
-                $steps["goTo00LoginPage"] = await $steps["goTo00LoginPage"];
-              }
             }}
           >
             {"\u8fd4\u56de"}
