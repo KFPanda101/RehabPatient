@@ -329,7 +329,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__bKjEi
+                      sty.formField__yuYfE
                     )}
                     hidden={false}
                     hideValidationMessage={false}
@@ -343,13 +343,13 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     trigger={``}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__lXcLw)}
+                      className={classNames("__wab_instance", sty.input__bbBId)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__xqSt
+                      sty.formField__jKoKc
                     )}
                     initialValue={"\u9a8c\u8bc1\u7801"}
                     label={"\u9a8c\u8bc1\u7801"}
@@ -357,11 +357,11 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     noStyle={true}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__xgZv)}
+                      className={classNames("__wab_instance", sty.input__puxEq)}
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button___0ChEr)}
+                    className={classNames("__wab_instance", sty.button__lYwy3)}
                     disabled={false}
                     submitsForm={true}
                     type={"primary"}
@@ -370,7 +370,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___49DnF
+                        sty.text__k9T5Y
                       )}
                     >
                       {"\u767b\u5f55"}
