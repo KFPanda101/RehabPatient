@@ -331,7 +331,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__vuRRi
+                      sty.formField__lzaNx
                     )}
                     hidden={false}
                     hideValidationMessage={false}
@@ -345,13 +345,13 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     trigger={``}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__qfkGh)}
+                      className={classNames("__wab_instance", sty.input__vBdU3)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__dUyGh
+                      sty.formField__hVrgG
                     )}
                     initialValue={"\u9a8c\u8bc1\u7801"}
                     label={"\u9a8c\u8bc1\u7801"}
@@ -359,11 +359,11 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     noStyle={true}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__x4QAt)}
+                      className={classNames("__wab_instance", sty.input__rtPN)}
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__bhUh8)}
+                    className={classNames("__wab_instance", sty.button__qepff)}
                     disabled={false}
                     submitsForm={true}
                     type={"primary"}
@@ -372,7 +372,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__rrOaD
+                        sty.text__mVopH
                       )}
                     >
                       {"\u767b\u5f55"}
@@ -523,9 +523,23 @@ function Plasmic_00LoginPage__RenderFunc(props: {
           onClick={async event => {
             const $steps = {};
 
-            $steps["goTo01Home"] = true
+            $steps["goToPage"] = true
               ? (() => {
-                  const actionArgs = { destination: `/Home` };
+                  const actionArgs = {
+                    destination: (() => {
+                      try {
+                        return $ctx.config.routePrefix + "/Home";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()
+                  };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&
@@ -541,11 +555,11 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                 })()
               : undefined;
             if (
-              $steps["goTo01Home"] != null &&
-              typeof $steps["goTo01Home"] === "object" &&
-              typeof $steps["goTo01Home"].then === "function"
+              $steps["goToPage"] != null &&
+              typeof $steps["goToPage"] === "object" &&
+              typeof $steps["goToPage"].then === "function"
             ) {
-              $steps["goTo01Home"] = await $steps["goTo01Home"];
+              $steps["goToPage"] = await $steps["goToPage"];
             }
           }}
         >
