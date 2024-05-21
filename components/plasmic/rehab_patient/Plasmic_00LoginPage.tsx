@@ -329,7 +329,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__z1Abs
+                      sty.formField__rdW4
                     )}
                     hidden={false}
                     hideValidationMessage={false}
@@ -343,13 +343,13 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     trigger={``}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__nwM0O)}
+                      className={classNames("__wab_instance", sty.input__uuZoP)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__uCetH
+                      sty.formField__fhbpk
                     )}
                     initialValue={"\u9a8c\u8bc1\u7801"}
                     label={"\u9a8c\u8bc1\u7801"}
@@ -357,11 +357,14 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     noStyle={true}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__hCaLs)}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.input___99Lc0
+                      )}
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button___3A2K)}
+                    className={classNames("__wab_instance", sty.button__fvhiJ)}
                     disabled={false}
                     submitsForm={true}
                     type={"primary"}
@@ -370,7 +373,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__ozX7
+                        sty.text__gg481
                       )}
                     >
                       {"\u767b\u5f55"}

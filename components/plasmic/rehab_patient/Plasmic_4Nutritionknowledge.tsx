@@ -539,7 +539,7 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                       destination: (() => {
                         try {
                           return (
-                            $ctx.config.routePrefix + "/Varioustypesoffoode"
+                            $ctx.config.routePrefix + "/Varioustypesoffood"
                           );
                         } catch (e) {
                           if (
