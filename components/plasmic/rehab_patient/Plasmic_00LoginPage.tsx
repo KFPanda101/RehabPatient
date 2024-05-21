@@ -331,7 +331,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___8YCop
+                      sty.formField__k2Opl
                     )}
                     hidden={false}
                     hideValidationMessage={false}
@@ -345,13 +345,13 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     trigger={``}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__aaxDw)}
+                      className={classNames("__wab_instance", sty.input__etrtA)}
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__xncoM
+                      sty.formField___1M8WG
                     )}
                     initialValue={"\u9a8c\u8bc1\u7801"}
                     label={"\u9a8c\u8bc1\u7801"}
@@ -359,11 +359,14 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                     noStyle={true}
                   >
                     <AntdInput
-                      className={classNames("__wab_instance", sty.input__dwGb9)}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.input___6Gm79
+                      )}
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button___0UqDa)}
+                    className={classNames("__wab_instance", sty.button__rOsM)}
                     disabled={false}
                     submitsForm={true}
                     type={"primary"}
@@ -372,7 +375,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__nOh42
+                        sty.text__yqUkU
                       )}
                     >
                       {"\u767b\u5f55"}
@@ -518,51 +521,7 @@ function Plasmic_00LoginPage__RenderFunc(props: {
             );
           })()}
         </div>
-        <div
-          className={classNames(projectcss.all, sty.freeBox__xgNAk)}
-          onClick={async event => {
-            const $steps = {};
-
-            $steps["goToPage"] = true
-              ? (() => {
-                  const actionArgs = {
-                    destination: (() => {
-                      try {
-                        return $ctx.config.routePrefix + "/Home";
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()
-                  };
-                  return (({ destination }) => {
-                    if (
-                      typeof destination === "string" &&
-                      destination.startsWith("#")
-                    ) {
-                      document
-                        .getElementById(destination.substr(1))
-                        .scrollIntoView({ behavior: "smooth" });
-                    } else {
-                      __nextRouter?.push(destination);
-                    }
-                  })?.apply(null, [actionArgs]);
-                })()
-              : undefined;
-            if (
-              $steps["goToPage"] != null &&
-              typeof $steps["goToPage"] === "object" &&
-              typeof $steps["goToPage"].then === "function"
-            ) {
-              $steps["goToPage"] = await $steps["goToPage"];
-            }
-          }}
-        >
+        <div className={classNames(projectcss.all, sty.freeBox__xgNAk)}>
           <AntdButton
             className={classNames("__wab_instance", sty.button__glWed)}
             onClick={async () => {
@@ -588,7 +547,21 @@ function Plasmic_00LoginPage__RenderFunc(props: {
 
               $steps["goToPage"] = true
                 ? (() => {
-                    const actionArgs = {};
+                    const actionArgs = {
+                      destination: (() => {
+                        try {
+                          return $ctx.config.routePrefix + "/Home";
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
