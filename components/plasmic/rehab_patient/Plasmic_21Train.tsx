@@ -292,7 +292,7 @@ function Plasmic_21Train__RenderFunc(props: {
                   const actionArgs = {
                     destination: (() => {
                       try {
-                        return $ctx.config.routePrefix + "/SafetyInstructions";
+                        return $ctx.config.routePrefix + "/Home";
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
