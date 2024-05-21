@@ -868,7 +868,7 @@
           "projectId": "caYJwnGE8e7sjdEDGdZ8Mn",
           "renderModuleFilePath": "plasmic/rehab_patient/Plasmic_00LoginPage.tsx",
           "importSpec": {
-            "modulePath": "../pages/LoginPage.tsx"
+            "modulePath": "../pages/index.tsx"
           },
           "cssFilePath": "plasmic/rehab_patient/Plasmic_00LoginPage.module.css",
           "scheme": "blackbox",
