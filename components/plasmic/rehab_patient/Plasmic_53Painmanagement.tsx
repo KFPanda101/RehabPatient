@@ -155,7 +155,7 @@ function Plasmic_53Painmanagement__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__gi1BC)}>
+          <div className={classNames(projectcss.all, sty.freeBox___2ODWw)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -176,7 +176,7 @@ function Plasmic_53Painmanagement__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -222,7 +222,7 @@ function Plasmic_53Painmanagement__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__tTzDo
+                sty.text__hts8V
               )}
             >
               {"\u9000\u51fa"}

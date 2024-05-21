@@ -158,7 +158,7 @@ function Plasmic_33Preventingfallsandfallingfromthebed__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__aOiW)}>
+          <div className={classNames(projectcss.all, sty.freeBox__lzsAj)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -179,7 +179,7 @@ function Plasmic_33Preventingfallsandfallingfromthebed__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -225,7 +225,7 @@ function Plasmic_33Preventingfallsandfallingfromthebed__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__snnXz
+                sty.text__kOcyv
               )}
             >
               {"\u9000\u51fa"}

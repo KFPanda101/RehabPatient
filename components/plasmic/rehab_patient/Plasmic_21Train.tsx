@@ -150,10 +150,10 @@ function Plasmic_21Train__RenderFunc(props: {
           >
             {"\u8bad\u7ec3"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__dahJg)}>
+          <div className={classNames(projectcss.all, sty.freeBox___1WneF)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img__hXctV)}
+              className={classNames(sty.img___2Ctv8)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -169,7 +169,7 @@ function Plasmic_21Train__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -215,7 +215,7 @@ function Plasmic_21Train__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__lHiUr
+                sty.text__nSnXl
               )}
             >
               {"\u9000\u51fa"}

@@ -157,7 +157,7 @@ function Plasmic_35PicCtubeplacementprocessing__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__emG2W)}>
+          <div className={classNames(projectcss.all, sty.freeBox__cdhhL)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -178,7 +178,7 @@ function Plasmic_35PicCtubeplacementprocessing__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -224,7 +224,7 @@ function Plasmic_35PicCtubeplacementprocessing__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__tBrWa
+                sty.text__kiJbl
               )}
             >
               {"\u9000\u51fa"}

@@ -47,12 +47,12 @@
   text-align: right;
   position: relative;
   align-self: center;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   min-width: 0;
   padding: 15px 60px 15px 15px;
 }
-.freeBox__pdx4X {
+.freeBox__pJzr2 {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -70,7 +70,7 @@
 .img > picture > img {
   object-fit: contain;
 }
-.text__re7Kd {
+.text__vPa6Q {
   width: auto;
   height: auto;
   max-width: 100%;

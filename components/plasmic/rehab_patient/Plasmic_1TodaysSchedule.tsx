@@ -247,7 +247,7 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||

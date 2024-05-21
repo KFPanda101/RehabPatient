@@ -156,7 +156,7 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
             >
               {"\u6587\u7ae0"}
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__nJpg5)}>
+            <div className={classNames(projectcss.all, sty.freeBox__ndH)}>
               <PlasmicImg__
                 data-plasmic-name={"img"}
                 data-plasmic-override={overrides.img}
@@ -177,7 +177,7 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
                         const actionArgs = {
                           destination: (() => {
                             try {
-                              return $ctx.config.routePrefix + "/LoginPage";
+                              return $ctx.config.routePrefix + "/";
                             } catch (e) {
                               if (
                                 e instanceof TypeError ||
@@ -223,7 +223,7 @@ function Plasmic_51Persistinhealth__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text___0QmXv
+                  sty.text__kWHe
                 )}
               >
                 {"\u9000\u51fa"}

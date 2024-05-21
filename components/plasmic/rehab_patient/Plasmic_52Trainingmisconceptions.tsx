@@ -156,7 +156,7 @@ function Plasmic_52Trainingmisconceptions__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__bnSg4)}>
+          <div className={classNames(projectcss.all, sty.freeBox___9Ziwf)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -177,7 +177,7 @@ function Plasmic_52Trainingmisconceptions__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -223,7 +223,7 @@ function Plasmic_52Trainingmisconceptions__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text___0Fviu
+                sty.text___5Iyp4
               )}
             >
               {"\u9000\u51fa"}

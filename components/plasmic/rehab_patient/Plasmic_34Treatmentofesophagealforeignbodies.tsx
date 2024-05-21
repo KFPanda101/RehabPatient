@@ -157,7 +157,7 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__xgY1G)}>
+          <div className={classNames(projectcss.all, sty.freeBox__rjtu)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -178,7 +178,7 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -224,7 +224,7 @@ function Plasmic_34Treatmentofesophagealforeignbodies__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__qeB9F
+                sty.text__vhl7G
               )}
             >
               {"\u9000\u51fa"}

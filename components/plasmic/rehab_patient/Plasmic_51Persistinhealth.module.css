@@ -61,7 +61,7 @@
   min-width: 0;
   padding: 15px 60px 15px 15px;
 }
-.freeBox__nJpg5 {
+.freeBox__ndH {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -79,7 +79,7 @@
 .img > picture > img {
   object-fit: contain;
 }
-.text___0QmXv {
+.text__kWHe {
   width: auto;
   height: auto;
   max-width: 100%;

@@ -50,7 +50,7 @@
   min-width: 0;
   padding: 15px 60px 15px 15px;
 }
-.freeBox__sQbl {
+.freeBox__zGpbu {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -61,14 +61,14 @@
   max-width: 100%;
   padding: 5px 0px 0px;
 }
-.img__otEgo {
+.img___5LQd {
   object-fit: contain;
   max-width: 25%;
 }
-.img__otEgo > picture > img {
+.img___5LQd > picture > img {
   object-fit: contain;
 }
-.text__bfyfm {
+.text__mSiHs {
   width: auto;
   height: auto;
   max-width: 100%;

@@ -151,10 +151,10 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
           >
             {"\u5b89\u5168\u987b\u77e5"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__xbYg7)}>
+          <div className={classNames(projectcss.all, sty.freeBox___8HROz)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img__lv9Tg)}
+              className={classNames(sty.img__xEttz)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -170,7 +170,7 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -216,7 +216,7 @@ function Plasmic_2SafetyInstructions__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text___1Cc
+                sty.text__k4KpP
               )}
             >
               {"\u9000\u51fa"}

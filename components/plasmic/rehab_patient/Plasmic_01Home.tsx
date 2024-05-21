@@ -187,7 +187,7 @@ function Plasmic_01Home__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -655,7 +655,7 @@ function Plasmic_01Home__RenderFunc(props: {
                   const actionArgs = {
                     destination: (() => {
                       try {
-                        return $ctx.config.routePrefix + "/LoginPage";
+                        return $ctx.config.routePrefix + "/";
                       } catch (e) {
                         if (
                           e instanceof TypeError ||

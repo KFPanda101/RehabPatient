@@ -151,10 +151,10 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
           >
             {"\u5217\u8868"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__oHWaS)}>
+          <div className={classNames(projectcss.all, sty.freeBox__dJemI)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img___8Om55)}
+              className={classNames(sty.img__lpZ6V)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -170,7 +170,7 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -216,7 +216,7 @@ function Plasmic_4Nutritionknowledge__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__kiSuq
+                sty.text__lnc7
               )}
             >
               {"\u9000\u51fa"}

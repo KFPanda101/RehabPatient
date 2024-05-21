@@ -186,7 +186,7 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__lJaU)}>
+          <div className={classNames(projectcss.all, sty.freeBox__qEf18)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -207,7 +207,7 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -253,7 +253,7 @@ function Plasmic_48BalancedDietaryGuidelines__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__j2ZmC
+                sty.text__pbXb0
               )}
             >
               {"\u9000\u51fa"}

@@ -155,7 +155,7 @@ function Plasmic_41Carbohydrate__RenderFunc(props: {
           >
             {"\u6587\u7ae0"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__wdZs)}>
+          <div className={classNames(projectcss.all, sty.freeBox__vUq4S)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
               data-plasmic-override={overrides.img}
@@ -176,7 +176,7 @@ function Plasmic_41Carbohydrate__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -222,7 +222,7 @@ function Plasmic_41Carbohydrate__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__nBfrY
+                sty.text__znq8K
               )}
             >
               {"\u9000\u51fa"}

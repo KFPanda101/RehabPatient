@@ -151,10 +151,10 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
           >
             {"\u5217\u8868"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__sQbl)}>
+          <div className={classNames(projectcss.all, sty.freeBox__zGpbu)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img__otEgo)}
+              className={classNames(sty.img___5LQd)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -170,7 +170,7 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -216,7 +216,7 @@ function Plasmic_3NursingKnowledge__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__bfyfm
+                sty.text__mSiHs
               )}
             >
               {"\u9000\u51fa"}

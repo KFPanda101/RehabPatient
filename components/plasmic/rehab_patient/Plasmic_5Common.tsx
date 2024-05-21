@@ -150,10 +150,10 @@ function Plasmic_5Common__RenderFunc(props: {
           >
             {"\u5217\u8868"}
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__n5J)}>
+          <div className={classNames(projectcss.all, sty.freeBox__oi9BH)}>
             <PlasmicImg__
               alt={""}
-              className={classNames(sty.img__uwfUi)}
+              className={classNames(sty.img__fE7TC)}
               displayHeight={"auto"}
               displayMaxHeight={"none"}
               displayMaxWidth={"25%"}
@@ -169,7 +169,7 @@ function Plasmic_5Common__RenderFunc(props: {
                       const actionArgs = {
                         destination: (() => {
                           try {
-                            return $ctx.config.routePrefix + "/LoginPage";
+                            return $ctx.config.routePrefix + "/";
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -215,7 +215,7 @@ function Plasmic_5Common__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__yO7Re
+                sty.text__rLSdG
               )}
             >
               {"\u9000\u51fa"}
