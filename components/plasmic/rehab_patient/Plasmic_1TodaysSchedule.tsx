@@ -61,9 +61,9 @@ import {
 import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
 import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 
-import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
 import { RichTable } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-table";
 import { tableHelpers as RichTable_Helpers } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-table";
+import { SideEffect } from "@plasmicpkgs/plasmic-basic-components";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -86,8 +86,8 @@ export const Plasmic_1TodaysSchedule__ArgProps = new Array<ArgPropType>();
 
 export type Plasmic_1TodaysSchedule__OverridesType = {
   root?: Flex__<"div">;
-  sideEffect?: Flex__<typeof SideEffect>;
   table?: Flex__<typeof RichTable>;
+  sideEffect?: Flex__<typeof SideEffect>;
 };
 
 export interface Default_1TodaysScheduleProps {}
@@ -121,6 +121,8 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $globalActions = useGlobalActions?.();
+
   const currentUser = useCurrentUser?.() || {};
 
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
@@ -143,12 +145,6 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
               throw e;
             }
           })()
-      },
-      {
-        path: "patientListArray",
-        type: "private",
-        variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => []
       },
       {
         path: "patientPersonalSchedule",
@@ -325,65 +321,6 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
             }}
           />
         </div>
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__jf9Gk
-          )}
-        >
-          {"\u4eca\u65e5\u65e5\u7a0b\u6682\u65e0"}
-        </div>
-        <SideEffect
-          data-plasmic-name={"sideEffect"}
-          data-plasmic-override={overrides.sideEffect}
-          className={classNames("__wab_instance", sty.sideEffect)}
-          deps={(() => {
-            try {
-              return [$state.variable, $ctx.query.id];
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return undefined;
-              }
-              throw e;
-            }
-          })()}
-          onMount={async () => {
-            const $steps = {};
-
-            $steps["patientList"] = true
-              ? (() => {
-                  const actionArgs = {
-                    variable: {
-                      objRoot: $state,
-                      variablePath: ["variable"]
-                    },
-                    operation: 0
-                  };
-                  return (({ variable, value, startIndex, deleteCount }) => {
-                    if (!variable) {
-                      return;
-                    }
-                    const { objRoot, variablePath } = variable;
-
-                    $stateSet(objRoot, variablePath, value);
-                    return value;
-                  })?.apply(null, [actionArgs]);
-                })()
-              : undefined;
-            if (
-              $steps["patientList"] != null &&
-              typeof $steps["patientList"] === "object" &&
-              typeof $steps["patientList"].then === "function"
-            ) {
-              $steps["patientList"] = await $steps["patientList"];
-            }
-          }}
-        />
-
         {(() => {
           const child$Props = {
             className: classNames("__wab_instance", sty.table),
@@ -400,6 +337,106 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
                 throw e;
               }
             })(),
+            fields: (() => {
+              const __composite = [
+                {
+                  key: "date",
+                  fieldId: "date",
+                  title: null,
+                  dataType: null,
+                  timeStyle: null,
+                  hour12: null
+                },
+                {
+                  key: "patientId",
+                  fieldId: "patientId",
+                  title: null,
+                  isHidden: null
+                },
+                {
+                  key: "timePeriod",
+                  fieldId: "timePeriod",
+                  title: null,
+                  isHidden: null
+                },
+                {
+                  key: "therapistId",
+                  fieldId: "therapistId",
+                  title: null,
+                  expr: null
+                },
+                {
+                  key: "startTime",
+                  fieldId: "startTime",
+                  title: null,
+                  dataType: null
+                },
+                {
+                  key: "endTime",
+                  fieldId: "endTime",
+                  title: null,
+                  dataType: null
+                },
+                {
+                  key: "therapistInfo",
+                  fieldId: "therapistInfo",
+                  title: null,
+                  expr: null
+                },
+                { key: "delete", fieldId: "delete", isHidden: null },
+                { key: "update_time", fieldId: "update_time", isHidden: null },
+                { key: "add_time", fieldId: "add_time", isHidden: null },
+                { key: "id", fieldId: "id", isHidden: null },
+                { key: "hospitalId", fieldId: "hospitalId", isHidden: null }
+              ];
+              __composite["0"]["title"] = "\u65e5\u671f";
+              __composite["0"]["dataType"] = "datetime";
+              __composite["0"]["timeStyle"] = "none";
+              __composite["0"]["hour12"] = false;
+              __composite["1"]["title"] = "\u60a3\u8005\u59d3\u540d";
+              __composite["1"]["isHidden"] = true;
+              __composite["2"]["title"] = "\u65f6\u95f4\u6bb5";
+              __composite["2"]["isHidden"] = true;
+              __composite["3"]["title"] = "\u6cbb\u7597\u5e08";
+              __composite["3"]["expr"] = (currentItem, currentValue) => {
+                return currentItem.therapistInfo.name;
+              };
+              __composite["4"]["title"] = "\u5f00\u59cb\u65f6\u95f4";
+              __composite["4"]["dataType"] = "number";
+              __composite["5"]["title"] = "\u7ed3\u675f\u65f6\u95f4";
+              __composite["5"]["dataType"] = "number";
+              __composite["6"]["title"] = "\u9884\u7ea6\u5730\u5740";
+              __composite["6"]["expr"] = (currentItem, currentValue) => {
+                return (() => {
+                  switch (currentValue.healGroupId) {
+                    case 6:
+                      return "5号楼-5层-501-运动疗法室";
+                    case 7:
+                      return "5号楼-5层-502-物理因子治疗室";
+                    case 8:
+                      return "5号楼-5层-503-作业治疗室";
+                    case 9:
+                      return "5号楼-5层-504-言语治疗室";
+                    case 10:
+                      return "5号楼-5层-505-认知治疗室";
+                    case 11:
+                      return "5号楼-5层-506-心肺治疗室";
+                    default:
+                      return null;
+                  }
+                })();
+              };
+              __composite["7"]["isHidden"] = true;
+              __composite["8"]["isHidden"] = true;
+              __composite["9"]["isHidden"] = true;
+              __composite["10"]["isHidden"] = true;
+              __composite["11"]["isHidden"] = true;
+              return __composite;
+            })(),
+
+            onRowClick: async (rowKey, row, event) => {
+              const $steps = {};
+            },
             onRowSelectionChanged: async (...eventArgs: any) => {
               generateStateOnChangePropForCodeComponents(
                 $state,
@@ -426,6 +463,7 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
                 RichTable_Helpers
               ).apply(null, eventArgs);
             },
+            pagination: true,
             scopeClassName: sty["table__instance"],
             selectedRowKey: generateStateValueProp($state, [
               "table",
@@ -478,6 +516,76 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
             />
           );
         })()}
+        <SideEffect
+          data-plasmic-name={"sideEffect"}
+          data-plasmic-override={overrides.sideEffect}
+          className={classNames("__wab_instance", sty.sideEffect)}
+          deps={(() => {
+            try {
+              return [$state.variable, $ctx.query.id];
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()}
+          onMount={async () => {
+            const $steps = {};
+
+            $steps["patientList"] = $ctx.query.id
+              ? (() => {
+                  const actionArgs = {
+                    args: [
+                      "/hospitalserver/schedules/personExport",
+                      (() => {
+                        try {
+                          return {
+                            patientId: $ctx.query.id
+                          };
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })(),
+                      (() => {
+                        try {
+                          return $state.patientPersonalSchedule;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    ]
+                  };
+                  return $globalActions["GlobalContext.callGet"]?.apply(null, [
+                    ...actionArgs.args
+                  ]);
+                })()
+              : undefined;
+            if (
+              $steps["patientList"] != null &&
+              typeof $steps["patientList"] === "object" &&
+              typeof $steps["patientList"].then === "function"
+            ) {
+              $steps["patientList"] = await $steps["patientList"];
+            }
+          }}
+        />
+
         <div className={classNames(projectcss.all, sty.freeBox__zSf3)}>
           <div
             className={classNames(
@@ -495,17 +603,17 @@ function Plasmic_1TodaysSchedule__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "sideEffect", "table"],
-  sideEffect: ["sideEffect"],
-  table: ["table"]
+  root: ["root", "table", "sideEffect"],
+  table: ["table"],
+  sideEffect: ["sideEffect"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  sideEffect: typeof SideEffect;
   table: typeof RichTable;
+  sideEffect: typeof SideEffect;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -610,8 +718,8 @@ export const Plasmic_1TodaysSchedule = Object.assign(
   withUsePlasmicAuth(withPlasmicPageGuard(makeNodeComponent("root"))),
   {
     // Helper components rendering sub-elements
-    sideEffect: makeNodeComponent("sideEffect"),
     table: makeNodeComponent("table"),
+    sideEffect: makeNodeComponent("sideEffect"),
 
     // Metadata about props expected for Plasmic_1TodaysSchedule
     internalVariantProps: Plasmic_1TodaysSchedule__VariantProps,
